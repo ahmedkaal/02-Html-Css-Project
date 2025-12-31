@@ -1,0 +1,685 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background-color: var(--c1);
+    color: var(--w);
+    display: none;
+}
+
+:root{
+    --c1:#ed664e;
+    --w:#fff;
+    --b:#000;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+
+/* Utility Classes Start */
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding:0 3% ;
+    /* background-color: rebeccapurple; */
+}
+
+.btn{
+    background-color: var(--c1);
+    padding: 8px 20px;
+    outline: none;
+    border: none;
+    color: var(--w);
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.7;
+    letter-spacing: 0px;
+}
+/* Utility Classes End */
+
+/* Landing Style Start................ */
+
+.landing{
+    width: 100%;
+    height:90vh ;
+    background-color: rgba(49, 48, 46, 0.8);
+    position: relative;
+    top: 0px;
+    left: 0px;
+  /* Backgroun imagekan waxaa la adeegsanaayaa marka lawaaro video-ga  */ 
+     /* background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(./images/education.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+
+/* HEADER.......................... */
+.header{
+    background-color: #fff;
+    width: 100%;
+    height: 70px;
+    padding: 1% 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+    z-index: 3;
+ 
+}
+
+.header h1{
+    color: var(--b);
+    font-size: 2rem;
+    font-family: forte;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.header h1 span{
+    color: var(--c1);
+     font-family: forte;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.nav ul li{
+      margin: 0.8rem;
+      
+}
+.nav ul li a{
+      color: var(--b);
+      text-transform: uppercase;
+      transition: 0.5s;
+}
+
+.nav ul li a:hover{
+    color: var(--c1);
+}
+
+ a:visited{
+    color: var(--c1);
+}
+
+/* bars and xmark............................ */
+
+.fa-bars , .fa-xmark{
+    font-size: 2rem;
+    color: #ed664e;
+    cursor: pointer;
+    display: none;
+}
+/* bars and xmark............................ */
+
+
+.landing-info{
+    width: 100%;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    color: var(--w);
+    z-index: 1;
+    
+}
+.landing-info h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.landing-info h3{
+    font-size: 3rem;
+    color: var(--c1);
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+}
+
+.btn{
+    background-color: var(--c1);
+    padding: 8px 20px;
+    outline: none;
+    border: none;
+    color: var(--w);
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: 0.7;
+    letter-spacing: 0px;
+}
+
+
+/* ...............................Background Video */
+/* ...............................Background Video */
+.bg-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index:-1;
+    /* opacity: 0.5; */
+}
+
+@media(min-aspect-ratio:16/9){
+    .bg-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .bg-video{
+        width: auto;
+        height: 100%;
+    }
+}
+/* Landing Style End................ */
+/* ............................................................................... */
+
+
+/* section style .............................. */
+/* section style .............................. */
+section{
+    padding: 5% 0;
+}
+
+/* ..........................................Tiltle */
+/* ..........................................Tiltle */
+
+.title {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.title h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom:0.5rem;
+}
+.title span {
+    color: var(--c1);
+    font-weight: 300;
+}
+
+.about p , .think p , .classes p ,  .expert p , .schedule p{
+   font-size: 1.2rem;
+    text-align: center;
+    margin-bottom:3rem;
+}
+
+
+.choose-program{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.col1 , .col2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px  rgba(119, 114, 114, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+}
+.col1 img, .col2 img{
+    width: 150px;
+    height: 150px;
+}
+.choose-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+.choose-info h4{
+    font-size: 1.1rem;
+}
+.choose-info p{
+    font-size: 1rem;
+    color: rgb(41, 40, 40);
+    text-align: left;
+    margin-bottom:0;
+}
+.choose-info span{
+    font-size: 1rem;
+    color: var(--c1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ..........................................Tiltle */
+/* ..........................................Tiltle */
+
+
+
+/* ........................Think section */
+/* ........................Think section */
+/* .......................................................................................... */
+.think{
+   
+    height: 400px;
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8) ), url(./images/education.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--w);
+}
+.think .container{
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+}
+.think h2{
+    font-size: 2rem;
+    text-align: center;
+}
+.think span{
+   
+    color: var(--c1);
+}
+/* ........................................................................................ */
+
+
+
+/* ..........................................our class start  */
+
+.classes{
+    background-color: transparent;
+}
+
+.our-class {
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: 2rem;
+  
+}
+.our-class .colll1 , .our-class .colll2{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding:1rem;
+}
+
+.our-class .colll1 .glaas{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom:1rem;
+    gap: 3rem;
+    padding:1rem;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.our-class .colll1 .glaas h4{
+    font-size: 1.1rem;
+   
+}
+.our-class .colll1 .glaas img{
+    width: 80px;
+    height: auto;
+}
+
+
+
+.our-class .colll2  img{
+    width: 100%;
+   max-height: 250px;
+   
+}
+
+/* ..........................................our class end  */
+
+.schedule{
+   
+    
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(./images/education.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--w);
+    z-index: -1;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+}
+tr,td{
+    border: .5px solid white;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+tr:nth-child(even){
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+
+/* Expert Section....................... */
+/* Expert Section....................... */
+
+.expert .box{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+  
+   gap: 1%;
+}
+.sawir{
+   
+   width: 100%;
+   /* height: 250px; */
+   overflow: hidden;
+}
+.sawir img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.expert .box .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:.2rem;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    padding: 1rem ;
+   
+}
+.expert .box .boxes span{
+    color: var(--c1);
+    font-size: 1rem;
+    text-transform: capitalize;
+
+}
+.expert .box .boxes h4{
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.expert .box .boxes p{
+    text-align:left;
+    font-size: 1rem;
+    color: rgb(46, 46, 46);
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px ;
+    margin-top: -2rem;
+    /* background-color: red; */
+}
+.social i{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    /* border: 1px solid var(--c1); */
+    color: var(--c1);
+   border-radius: 50%;
+   transition: 0.5s ease;
+}
+.social i:hover{
+    color: var(--b);
+}
+
+
+
+
+
+
+
+/* ........................................................................................ */
+
+
+/* contact us .................................. */
+/* contact us .................................. */
+
+.map-form{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5%;
+    gap: 50px;
+     background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8) ), url(./images/education.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.map{
+    background-color: transparent;
+   
+}
+iframe{
+    width: 100%;
+   
+}
+.form{
+   
+   background-color: transparent;
+}
+input[type="text"] , input[type="email"], textarea {
+    background-color: rgba(234, 226, 226, 0.267);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 2px  var(--w);
+    font-size: 1.2rem;
+    color: var(--c1);
+    resize: none;
+}
+/* ................................................................................ */
+
+
+
+footer{
+    height: 50px;
+    color: var(--c1);
+    text-align: center;
+    font-weight: 500;
+    padding: 20px;
+    
+}
+
+/* .................................................................................... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsiveness........................................ */
+/* Responsiveness........................................ */
+
+@media screen and (max-width:1024px){
+    .header{
+       flex-direction: column;
+       justify-content: center;
+      
+    }
+    .header h1{
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      font-size: 1.5rem;
+     
+    }
+    .nav{
+        flex-direction: column;
+        height: 70vh;
+        background-color: #f88d7a;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        text-align: center;
+        display: none;
+    }
+    
+    .nav ul{
+        flex-direction: column;
+        width: 100%;
+        display: block;
+    }
+    .nav ul li {
+         /* background-color: yellow; */
+       
+        display: block;
+        border-bottom: 1px solid var(--w);
+        padding-bottom: .5rem;
+    }
+    .nav ul li a{
+        display: block;
+    }
+  
+    /* menu ....................................... */
+    .fa-bars , .fa-xmark{
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        cursor: pointer;
+    }
+    .fa-xmark{
+        display: none;
+    }
+
+    .show-nav{
+        display: block;
+    }
+    .hide-nav{
+        display: none;
+    }
+    
+    .hide-menu-btn{
+        display: none;
+    }
+    .show-close-btn{
+        display: inline;
+    }
+    
+    /* menu ....................................... */
+
+    .landing-info h2{
+        font-size: 2rem;
+    }
+
+    .landing-info h3{
+        font-size: 1.5rem;
+    }
+
+    .choose-program{
+        grid-template-columns: 1fr;
+    }
+    /* think */
+    .think{
+        padding-top: 5rem;
+    }
+    
+    /* our classes */
+    .our-class{
+        grid-template-columns: auto;
+    }
+    /* contact us  */
+    .map-form{
+        grid-template-columns: auto;
+    }
+
+    .expert .box{
+        grid-template-columns: auto auto;
+        /* padding: 3rem; */
+    }
+    .boxes{
+        padding: 3rem;
+    }
+    .sawir img{
+        
+        height:300px;
+    }
+}
+
+
+@media screen and (max-width:620px){
+  .expert .box{
+        grid-template-columns: auto ;
+        /* padding: 3rem; */
+    }
+    .boxes{
+        padding:5rem;
+    }
+    .sawir img{
+        
+        height:300px;
+    }
+}
