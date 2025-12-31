@@ -55,7 +55,7 @@ ul{
 .landing{
     width: 100%;
     height:90vh ;
-    background-color: rgba(49, 48, 46, 0.8);
+    background-color: rgba(0,0,0,0.7);
     position: relative;
     top: 0px;
     left: 0px;
@@ -83,6 +83,14 @@ ul{
     box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
     z-index: 3;
  
+}
+
+.header img{
+    width: 200px;
+    height:30px;
+    box-shadow:0px 0px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+   
 }
 
 .header h1{
@@ -563,10 +571,35 @@ footer{
 /* Responsiveness........................................ */
 
 @media screen and (max-width:1024px){
+
+        .landing{
+    width: 100%;
+    height:90vh ;
+    background-color: rgba(0,0,0,0.7);
+    position: relative;
+    top: 0px;
+    left: 0px;
+  /* Backgroun imagekan waxaa la adeegsanaayaa marka lawaaro video-ga  */ 
+     /* background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(./images/education.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+
+
+
+
     .header{
        flex-direction: column;
        justify-content: center;
       
+    }
+
+    .header img{
+        position: absolute;
+      top: 1.5rem;
+      left: 2rem;
     }
     .header h1{
       position: absolute;
